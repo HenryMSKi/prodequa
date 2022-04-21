@@ -48,7 +48,7 @@ us.create = (req, res) => {
 }
 
 us.getAll = (req, res) => {
-    UsuarioModel.getAll(req, (err, data) => {
+    UsuarioModel.getAll(paramss, (err, data) => {
         if(err)
         {
             res.status(500).json({

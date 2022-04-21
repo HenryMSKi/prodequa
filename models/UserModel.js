@@ -48,10 +48,10 @@ Usuarios.getAll = (req, result) => {
     db.query(`SELECT * FROM tblUsuario`, (err, res) => {
         if(err){
             console.log("Error en el query getAll " + err);
-            result(null, err);
+            result(err, null);
             return;
         }else{
-            console.log("Se obtuvo los usuarios" + res);
+            console.log(res);
             result(null, res);
         }
     })
