@@ -44,7 +44,7 @@ Usuarios.create = (newUser, result) => {
     })
 }
 
-Usuarios.getAll = (req, result) => {
+Usuarios.getAll = (result) => {
     db.query(`SELECT * FROM tblUsuario`, (err, res) => {
         if(err){
             console.log("Error en el query getAll " + err);
